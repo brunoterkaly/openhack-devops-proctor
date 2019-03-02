@@ -47,7 +47,7 @@ location=$(az group show -n ProctorVMG --query location | tr -d '"')
 date=$(date '+%d/%m/%Y')
 
 if [[ $ipaddress =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
-    teamAAD=$location | sed -e 's/ //g'
+    teamAAD=$(echo "australisaeast "  | sed -e 's/ //g')
     if [[ ! -d "$teamAAD" ]]; then
     echo "Creating directory $teamAAD"
     mkdir -p $teamAAD
