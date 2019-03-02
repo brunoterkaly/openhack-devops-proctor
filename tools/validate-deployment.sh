@@ -48,8 +48,8 @@ date=$(date '+%d/%m/%Y')
 
 if [[ $ipaddress =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
     teamAAD=$location
-    echo TEAM:$teamAAD
     if [[ ! -d "$teamAAD" ]]; then
+    echo "Creating directory $teamAAD"
     mkdir -p $teamAAD
     fi
     
